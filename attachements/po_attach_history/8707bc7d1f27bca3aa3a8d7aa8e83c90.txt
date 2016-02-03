@@ -1,0 +1,5 @@
+http://developer.android.com/sdk/installing/installing-adt.html
+
+http://developer.android.com/tools/sdk/eclipse-adt.html
+
+http://developer.android.com/sdk/index.html#download

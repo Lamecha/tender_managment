@@ -1,0 +1,75 @@
+create trigger ss_ss before update on employee
+for each row
+begin
+  update consignee set
+    created_by = NEW.employee_pin
+    where created_by = OLD.employee_pin;
+end
+
+
+
+//------------------------------------------
+
+delimiter $$
+
+create trigger bi_song before insert on test.song
+for each row
+begin
+  set NEW.rating_sum = 0;
+  set NEW.rating_count = 0;
+  set NEW.rating_avg = NULL;
+end
+$$
+
+create trigger ai_rating after insert on test.rating
+for each row
+begin
+  update song set
+    rating_sum = rating_sum + NEW.rating,
+    rating_count = rating_count + 1,
+    rating_avg = rating_sum / rating_count
+    where song_id = NEW.song_id;
+end
+$$
+delimiter ;
+
+//------------------------------------------------
+
+Final
+delimiter $$
+create trigger ss_ss before update on employee
+for each row
+begin
+  update consignee set
+    created_by = NEW.employee_pin
+    where created_by = OLD.employee_pin;
+end
+$$
+delimiter ;
+//----------------------------------------------
+delimiter $$
+create trigger ss_ss before update on employee
+for each row
+begin
+  update consignee,create_purchaser set
+    created_by = NEW.employee_pin,
+    where created_by = OLD.employee_pin;
+    updated_by = NEW.employee_pin,
+    where updated_by = OLD.employee_pin;
+end
+$$
+delimiter;
+//-----------------------------------------------
+
+
+delimiter $$
+create trigger delta before delete on office
+for each row
+begin
+  SET @myVar1 = (SELECT id from tender where tender_office = OLD.id);
+  IF @myVar1 > 0 THEN
+  CALL cannot_delete_error;
+  END IF;
+end
+$$
+delimiter ;

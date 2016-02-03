@@ -1,0 +1,182 @@
+//COMMON TRIGGER NOT CREATED IN DB JUST FOR DEMO AND LEARN
+delimiter $$
+create trigger for_consignee before update on employee
+for each row
+begin
+  update consignee set
+    created_by = NEW.employee_pin
+    where created_by = OLD.employee_pin;
+  update consignee set
+    updated_by = NEW.employee_pin
+   where updated_by = OLD.employee_pin;
+    
+
+end
+$$
+delimiter ;
+
+//-----------------------------------------------------------------------------
+//------------------------------------------------------------
+//TRIGGER FOR OFFFICER UPDATE (officer [table_name])
+->Updating all tables (not officer itself)
+delimiter $$
+create trigger officer_update before update on officer
+for each row
+begin
+  update consignee set
+    created_by = NEW.officer_pin
+    where created_by = OLD.officer_pin;
+  update consignee set
+    updated_by = NEW.officer_pin
+   where updated_by = OLD.officer_pin;
+  update create_purchaser set
+    created_by = NEW.officer_pin
+    where created_by = OLD.officer_pin;
+  update create_purchaser set
+    updated_by = NEW.officer_pin
+   where updated_by = OLD.officer_pin; 
+ update item_manager set
+    created_by = NEW.officer_pin
+    where created_by = OLD.officer_pin;
+  update item_manager set
+    updated_by = NEW.officer_pin
+   where updated_by = OLD.officer_pin;  
+ update main_consignee set
+    main_csign_createdby = NEW.officer_pin
+    where main_csign_createdby = OLD.officer_pin;
+  update main_consignee set
+    main_csign_updatedby = NEW.officer_pin
+   where main_csign_updatedby = OLD.officer_pin;
+update office set
+    created_by = NEW.officer_pin
+    where created_by = OLD.officer_pin;
+  update office set
+    updated_by = NEW.officer_pin
+   where updated_by = OLD.officer_pin;  
+update employee set
+    created_by = NEW.officer_pin
+    where created_by = OLD.officer_pin;
+  update employee set
+    updated_by = NEW.officer_pin
+   where updated_by = OLD.officer_pin;  
+update tender set
+    created_by = NEW.officer_pin
+    where created_by = OLD.officer_pin;
+  update tender set
+    updated_by = NEW.officer_pin
+   where updated_by = OLD.officer_pin;  
+end
+$$
+delimiter ;
+//-------------------------------------------------------
+
+//TRIGGER FOR EMPLOYEE Update (employee [employee_update])
+->UPDATING ALL THE OOTHER TABLES (NOT employee table itself)
+->FOR UPADATING OFFICER CREATED BY AND UPDATED BY 2 Seperate quries are made in employee_update function
+******************************************************
+delimiter $$
+create trigger employee_update before update on employee
+for each row
+begin
+  update office set
+    created_by = NEW.employee_pin
+    where created_by = OLD.employee_pin;
+  update office set
+    updated_by = NEW.employee_pin
+   where updated_by = OLD.employee_pin;
+  update tender set
+    created_by = NEW.employee_pin
+    where created_by = OLD.employee_pin;
+  update tender set
+    updated_by = NEW.employee_pin
+   where updated_by = OLD.employee_pin; 
+  update consignee set
+    created_by = NEW.employee_pin
+    where created_by = OLD.employee_pin;
+  update consignee set
+    updated_by = NEW.employee_pin
+   where updated_by = OLD.employee_pin;
+  update create_purchaser set
+    created_by = NEW.employee_pin
+    where created_by = OLD.employee_pin;
+  update create_purchaser set
+    updated_by = NEW.employee_pin
+   where updated_by = OLD.employee_pin; 
+ update item_manager set
+    created_by = NEW.employee_pin
+    where created_by = OLD.employee_pin;
+  update item_manager set
+    updated_by = NEW.employee_pin
+   where updated_by = OLD.employee_pin;  
+ update main_consignee set
+    main_csign_createdby = NEW.employee_pin
+    where main_csign_createdby = OLD.employee_pin;
+  update main_consignee set
+    main_csign_updatedby = NEW.employee_pin
+   where main_csign_updatedby = OLD.employee_pin;
+end
+$$
+delimiter ;
+//-------------------------
+//--------------------------
+TRIGGER BEFORE FIRM DELETION (consignee [table_name])
+->FIRM INCLUDED IN `tender_firm` table so before deleting firm we first check that
+if this firm exists in `tender_firm` table then we prevent deleting firm.
+*************************
+delimiter $$
+create trigger delete_firm before delete on consignee
+for each row
+begin
+  SET @myVar1 = (SELECT id from tender_firms where firm = OLD.id);
+  IF @myVar1 > 0 THEN
+  CALL cannot_delete_error;
+  END IF;
+end
+$$
+delimiter ;
+
+//------------------------------------
+//---------------------------------
+TRIGGER BEFORE PURCHASER DELETION (create_purchaser [table_name])
+->Purchaser included in `main_consignee` and `tender` table  so before deleting purchaser we first check that
+if this purchaser exists in `main_consignee` table then in `tender` table then we prevent deleting purchaser.
+*********************
+delimiter $$
+create trigger delete_purchaser before delete on create_purchaser
+for each row
+begin
+  SET @myVarP1 = (SELECT id from main_consignee where main_csign_purchaser = OLD.id);
+  SET @myVarP2 = (SELECT id from tender WHERE tender_purchaser = OLD.id );
+  IF @myVarP1 > 0 THEN
+  CALL cannot_delete_error;
+  END IF;
+  IF @myVarP2 > 0 THEN
+  CALL cannot_delete_error;
+  END IF;
+end
+$$
+delimiter ;
+//-----------------------------------------------
+//-----------------------------------------------
+TRIGGER BEFORE OFFICE DELETION (office [table_name])
+->office in 2 tables->officer,employee
+*************
+delimiter $$
+create trigger delete_office before delete on office
+for each row
+begin
+  SET @myVarO1 = (SELECT id from officer where officer_office = OLD.id);
+  SET @myVarO2 = (SELECT id from employee WHERE employee_office = OLD.id );
+  IF @myVarO1 > 0 THEN
+  CALL cannot_delete_error;
+  END IF;
+  IF @myVarO2 > 0 THEN
+  CALL cannot_delete_error;
+  END IF;
+end
+$$
+delimiter ;
+//-----------------------------------------------
+//-----------------------------------------------
+
+

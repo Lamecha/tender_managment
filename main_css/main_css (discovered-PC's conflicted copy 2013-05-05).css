@@ -1,0 +1,1184 @@
+@charset "utf-8";
+/* CSS Document */
+@import '../fonts/bebasNue.css';
+@import '../fonts/ptc5.css';
+@import '../fonts/colabbol.css';
+
+
+
+*
+{
+	/* [disabled]margin:0; */
+	margin:0px;
+	padding:0;
+	text-decoration:none;
+	font-family:Verdana, Geneva, sans-serif;
+}
+#index-header
+{
+	width:100%;
+	height:50px;
+	background:#111111;
+}
+#index-main
+{
+	width:100%;
+	height:auto;
+	min-height:550px;
+	background:#2ba6cb;
+	float:left;
+}
+#index-footer
+{
+	background:#eeeeee;
+	width:100%;
+	float:left;
+
+	display:block;
+}
+#index-sub-footer
+{
+	width:1000px;
+	height:40px;
+	margin:0 auto;
+	background:#eeeeee;
+
+	display:block;
+}
+#footer-b-line
+{
+    font-family: 'BebasNeueRegular';
+	font-size:16px;
+	color:#3f3f3f;
+
+}
+#index-sub-main
+{
+	width:1000px;
+	height:550px;
+	
+	margin:0 auto;
+
+}
+#working-sub-main
+{
+	width:100%;
+	height:auto;
+	min-height:500px;
+
+	float:left;
+	margin:0 auto;
+
+}
+
+#login
+{
+	width:480px;
+	height:300px;
+	
+	margin:100px 0px 0px 240px;
+	float:left;
+	
+}
+#login table
+{
+	width:450px;
+	height:250px;
+	border:15px solid #2c2c2c;
+	border-radius:10px;
+	padding:20px;
+	box-shadow:0px 0px 10px #333333;
+	margin-top:10px;
+	background:#4db4d3;	
+
+	
+}
+#login table tr td label
+{
+font-family: 'Open Sans', sans-serif;
+color:#fff;
+
+}
+#login table tr td input[type=text],input[type=password]
+{
+	width:250px;
+	height:40px;
+	background:#fff;
+	border:none;
+	border-radius:4px;
+	
+
+}
+#example2
+{
+	width:150px;
+	height:30px;
+	background:#137795;
+	border:none;
+	font-family: 'Open Sans:600', sans-serif;
+	font-size:14px;
+	color:#fff;
+
+	
+}
+#example2:hover,#example2.hover
+{
+	background:#006582;
+}
+#head-title
+{
+    font-family: 'BebasNeueRegular';
+	font-size:18px;
+	color:#3f3f3f;
+	float:left;
+	color:#fff;
+	margin:30px 0px 0px 10px;
+}
+
+#index-navigation
+{
+	width:100%;
+	height:40px;
+	background:#181818;
+	display:block;
+
+
+}
+#working-panel
+{
+	width:1020px;
+	height:auto;
+	min-height:550px;
+	background:#fff;
+	margin-top:0px;
+	margin-left:10px;
+	margin-bottom:10px;
+	padding-bottom:10px;
+
+	float:left;
+}
+#whois
+{
+	float:right;
+	margin:12px 38px 0px 0px;
+z-index:1000;
+position:relative;
+	
+}
+span#loged_in_user
+{
+	width:350px;
+	height:140px;
+	background:#f5f5f5;
+	display:block;
+	margin-bottom:5px;
+
+}
+.users_name
+{
+	float:left;
+	font-size:15px;
+	    font-family: 'BebasNeueRegular';
+		color:#1b1b1b;
+		margin:5px;
+		letter-spacing:1px;
+		width:235px;
+
+		overflow:hidden;
+	
+}
+.u_l_btn
+{
+	height:25px;
+	background:#4b8efa;
+	border:1px solid #3079ed;
+	padding-left:8px;
+	padding-right:8px;
+	color:#fff;
+	text-decoration:none;
+	float:left;
+	margin:5px;
+	font-size:15px;
+	font-family: 'BebasNeueRegular';
+	line-height:26px;
+	
+}
+li.dpies
+{
+background:url(../main_images/menu-arrow.png) no-repeat right 10px;
+}
+li.dpies_left_arraow
+{
+	background:url(../main_images/menu-arrow2.png) no-repeat right 10px;
+}
+#title_work_page
+{
+	width:99%;
+	height:26px;
+	padding-left:1%;
+
+	color:#fff;
+	display:block;
+		font-size:18px;
+		text-shadow:0px -1px 0px #000000;
+	font-family: 'BebasNeueRegular';
+	line-height:26px;
+	float:left;
+	background:url(../main_images/strips.jpg);
+}
+table#working-form
+{
+	margin-top:10px;
+	margin-left:10px;
+}
+table#infos
+{
+	margin-top:10px;
+	margin-left:0px;
+	float:left;
+ 
+	 width:250;
+}
+table#working-form tr td label
+{
+font-family:Tahoma, Geneva, sans-serif;
+font-size:13px;
+text-transform:capitalize;
+color:#2c2c2b;
+
+}
+table#working-form tr td input[type=text]
+{
+	margin-left:10px;
+	height:25px;
+	width:220px;
+	border:1px solid #696969;
+	
+}
+table#working-form tr td select
+{
+	margin-left:10px;
+	height:25px;
+	width:220px;
+	border:1px solid #696969;
+	
+}
+table#working-form tr td tinput[type=text].dp
+{
+	margin-left:10px;
+	height:25px;
+	width:110px;
+	border:1px solid #696969;
+	
+}
+table#working-form tr td input[type=password].dp
+{
+	margin-left:10px;
+	height:25px;
+	width:110px;
+	border:1px solid #696969;
+	
+}
+
+table#working-form tr td textarea
+{
+	margin-left:10px;
+	height:60px;
+	width:220px;
+	border:1px solid #696969;
+}
+table#working-form tr td input[type=file]
+{
+	margin-left:10px;
+
+}
+table#working-form tr td input[type=submit]
+{
+	width:100px;
+	height:32px;
+	background:#6b1717;
+	border:none;
+		margin-left:10px;
+		color:#fff;
+}
+
+table#working-form tr td input[type=submit]:hover
+{
+background:#8f1919;	
+}
+table#attachments
+{
+	margin-top:10px;
+	margin-left:10px;
+}
+table#attachments tr th
+{
+	background:#DDFF73;
+	height:28px;
+	color:#1b1b1b;
+	font-size:13px;
+	font-weight:normal;
+	
+}
+table#attachments tr td input[type=text]
+{
+
+	height:25px;
+	width:120px;
+	border:1px solid #696969;
+}
+.add_more
+{
+	background:url(../main_images/add_more.png) no-repeat right center;
+	border:none;
+	height:17px;
+	padding-right:19px;
+	
+}
+.edit_button
+{
+	background:url(../main_images/edit.png) no-repeat 5px 0px;
+	border:none;
+	height:24px;
+	width:24px;
+	display:block;
+	padding-left:40px;
+	color:#029ae3;
+	
+}
+.Save_Button
+{
+	background:url(../main_images/save.png) no-repeat right center;
+	border:none;
+	height:17px;
+	padding-right:19px;
+	color:#FFFFFF;
+	
+}
+.old
+{
+	background:url(../main_images/display.gif) no-repeat right center;
+	border:none;
+	height:17px;
+	padding-right:19px;
+	
+}
+table#attachments tr td input[type=submit]
+{
+	width:70px;
+	height:27px;
+	background:#2985BF;
+	border:none;
+
+		color:#fff;
+}
+table#attachments tr td input[type=submit]:hover
+{
+background:#2999C1;	
+}
+
+
+table#multipels
+{
+	margin-top:10px;
+	margin-left:10px;
+}
+table#multipels tr th
+{
+	background:#e95958;
+	height:28px;
+	color:#fff;
+	font-size:13px;
+	font-weight:normal;
+	
+}
+table#multipels tr td input[type=text]
+{
+
+	height:25px;
+	width:180px;
+	border:1px solid #696969;
+}
+
+table#multipels tr td input[type=submit]
+{
+	width:70px;
+	height:27px;
+	background:#2985BF;
+	border:none;
+
+		color:#fff;
+}
+table#multipels tr td input[type=submit]:hover
+{
+background:#2999C1;	
+}
+#main_submit
+{
+	width:100px;
+	height:32px;
+	background:#6b1717;
+	border:none;
+		margin-left:10px;
+		color:#fff;
+}
+#main_submit:hover
+{
+background:#8f1919;	
+}
+#submit_uploaded
+{
+	width:100px;
+	height:32px;
+	background:#6b1717;
+	
+	border:none;
+		margin-left:10px;
+		color:#fff;
+}
+#submit_uploaded:hover
+{
+background:#8f1919;
+
+}
+
+table caption
+{
+	font-size:10px;
+	float:left;
+	color:#1d1d1d;
+	display:block;
+		font-size:14px;
+
+	font-family: 'BebasNeueRegular';
+}
+.hrules
+{
+	width:90%;
+	margin-left:10px;
+	margin-bottom:10px;
+	margin-top:10px;
+
+}
+table#pur_cnt_multipels
+{
+	margin-top:10px;
+	margin-left:10px;
+}
+table#pur_cnt_multipels tr th
+{
+	background:#e95958;
+	height:28px;
+	color:#fff;
+	font-size:13px;
+	font-weight:normal;
+	
+}
+table#pur_cnt_multipels tr td input[type=text]
+{
+
+	height:25px;
+	width:100px;
+	border:1px solid #696969;
+}
+
+.link_edit_director
+{
+
+color:#990000;
+
+font-size:15px;
+font-family: 'BebasNeueRegular';
+text-decoration:none;
+cursor:pointer;
+}
+.selectD
+{
+	margin-left:0px;
+	height:25px;
+	width:120px;
+	border:1px solid #696969;
+}
+#right_old_info
+{
+	float:left;
+	padding:5px;
+	margin-left:10px;
+	margin-top:0px;
+	margin-right:0px;
+	width:290px;
+	height:auto;
+	min-height:550px;
+	background:#FFF;
+}
+#old_info_span
+{
+	text-shadow:0px -1px 0px #000000;
+	font-family: 'BebasNeueRegular';
+	letter-spacing:2px;
+	font-size:16px;
+	text-transform:capitalize;
+	color:#56525c;
+	text-shadow:none;
+	
+	margin-left:10px;
+	margin-right:10px;
+	height:20px;
+	border-bottom:1px solid #000;
+}
+#infos tr td
+{
+    font-family: 'ColaborateLightRegular';
+	font-size:15px;
+	text-shadow:none;
+		letter-spacing:0px;
+		font-size:14px;
+}
+
+
+
+#nav a
+{
+	
+	text-shadow:0px -1px 0px #000000;
+	font-family: 'BebasNeueRegular';
+	letter-spacing:2px;
+	font-size:16px;
+	text-transform:capitalize;
+	color:#848484;
+	text-shadow:none;
+
+	margin-top:5px;
+
+	display:block;
+	width:152px;
+	height:43px;
+	background:#f0f0f0;
+	padding-left:5px;
+	line-height:45px;
+	border:1px solid #c1c0c2;
+
+}
+#nav a:hover
+{
+	text-decoration:none;
+	background:#2da4ff;
+	color:#fff;
+	border:1px solid #f7f7f7;
+	box-shadow:0px 0px 2px #666666;
+}
+#nav {
+
+    width:160px;
+    min-height:600px;
+	height:auto;
+
+	position:fixed;
+	
+
+	padding-top:10px;
+	
+}
+#main-container
+{
+
+	width:850px;
+	display:block;
+	height:auto;
+	min-height:650px;
+	float:left;
+	margin-left:165px;
+
+
+
+}
+
+.Dynamic_product_div
+{
+	font-family: 'ColaborateLightRegular';
+	font-size:15px;
+	text-shadow:none;
+	letter-spacing:0px;
+	font-size:14px;
+	width:845px;
+	display:block;
+	height:auto;
+	min-height:650px;
+	margin-top:5px;
+	background-color:#f7f7f7;
+	border-radius:4px;
+	
+	padding-left:5px;
+	float:left;
+}
+table#firm_table
+{
+	
+	margin-top:5px;
+	padding-left:10px;
+	
+}
+table#firm_table tr th
+{
+	text-shadow:0px -1px 0px #000000;
+	font-family: 'BebasNeueRegular';
+	letter-spacing:2px;
+	font-size:16px;
+	text-transform:capitalize;
+	color:#56525c;
+	text-shadow:none;
+	text-align:left;
+	height:10px;
+	padding-left:5px;
+}
+table#firm_table tr td
+{
+	font-family: 'ColaborateLightRegular';
+	font-size:15px;
+	text-shadow:none;
+	letter-spacing:0px;
+	word-spacing:1px;
+	font-size:14px;
+	padding-left:10px;
+}
+table#firm_table tr td a
+{
+	font-family: 'ColaborateLightRegular';
+	font-size:15px;
+	text-shadow:none;
+	letter-spacing:0px;
+	font-size:14px;
+}
+table#firm_table tr.heighlight
+{
+	background:#CCC;
+	height:25px;
+}
+table#firm_table tr td input[type=text]
+{
+	height:25px;
+	width:220px;
+	border:1px solid #696969;
+}
+table#firm_table tr td select
+{
+	height:25px;
+	width:220px;
+	border:1px solid #696969;
+}
+table#firm_table tr td textarea
+{
+	
+	height:60px;
+	width:220px;
+	border:1px solid #696969;
+}
+table#firm_table tr td input[type=submit]
+{
+	width:100px;
+	height:32px;
+	background:#6b1717;
+	border:none;
+		
+		color:#fff;
+}
+table#firm_table tr td input[type=submit]:hover
+{
+background:#8f1919;	
+}
+.Dynamic_product_div p
+{
+	width:840px;
+	height:25px;
+	background:#eeecec;
+	margin-top:5px;
+	padding-top:8px;
+}
+.tq_titles
+{
+	font-family: 'BebasNeueRegular';
+	letter-spacing:2px;
+	font-size:12px;
+	text-transform:capitalize;
+	color:#848484;	
+	margin-right:10px;
+	margin-left:5px;
+}
+.working-container
+{
+	width:840px;
+	height:570px;
+	
+
+	background:#eeecec;
+	margin-top:5px;
+	padding-top:8px;
+}
+.working-container table
+{
+
+	margin:0 auto;
+}
+.working-container table tr td label
+{
+font-family: 'BebasNeueRegular';
+	letter-spacing:2px;
+	font-size:14px;
+	text-transform:capitalize;
+	color:#6b6b6b;	
+}
+.working-container table tr td select
+{
+
+	height:28px;
+	width:252px;
+	border:1px solid #696969;	
+}
+.working-container table tr td input[type=text]
+{
+	
+	height:28px;
+	width:250px;
+	border:1px solid #696969;
+}
+.working-container table tr td input[type=submit]
+{
+	width:100px;
+	height:32px;
+	background:#3aacce;
+	border:none;
+	float:right;
+	margin-right:28px;
+	color:#fff;
+}
+.working-container table tr td input[type=submit]:hover
+{
+background:#8f1919;	
+}
+.working-container table tr td textarea
+{
+	
+	height:60px;
+	width:250px;
+	border:1px solid #696969;
+}
+.working-container table tr td input[type=button]
+{
+	float:right;
+	margin-right:28px;
+}
+.submitTable tr td input[type=button]
+{
+	float:right;
+	margin-right:28px;
+}
+/*.submitTable tr td input[type=submit]:hover*/
+.ProductSubmit:hover
+{
+background:#8f1919;	
+}
+/*.submitTable tr td input[type=submit]*/
+.ProductSubmit
+{
+	width:100px;
+	height:32px;
+	background:#3aacce;
+	border:none;
+	
+	color:#fff;
+}
+.submitTable
+{
+	width:840px;
+	background:#eeecec;
+	padding-bottom:10px;
+	
+}
+.error
+{
+	font-size:14px;
+	color:#900;
+}
+.success
+{
+	font-size:14px;
+	color:#3C0;
+}
+
+
+
+/* START AUTOCOMPLETE */
+.ac_holder{
+	position:relative;
+}
+.ac_field{	
+	background-image:url(images/autocomplete/autocomplete_leftcap.gif);
+	background-position:right center;
+	background-repeat:no-repeat;
+}
+.ac_field_busy{
+	background-image:url(images/autocomplete/autocomplete_spinner.gif);
+	background-position:right center;
+	background-repeat:no-repeat;
+}
+
+div.autocomplete
+{
+	position: absolute;
+	background-image: url(images/autocomplete/ac_pointer.gif);
+	background-position: 5% 0%;
+	background-repeat: no-repeat;
+	/* MG2: extra padding for animation */
+	padding: 10px 0 6px 0;
+}
+/* MG2: styles for the new divs to have the background visible while animating (had to use 2 inner divs for IE6) */
+div.autocomplete_inner1
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+div.autocomplete_inner2
+{
+	margin-top: 10px;
+	height: 100%;
+	width: 100%;
+	background-color: #333;
+}
+
+div.autocomplete div.ac_header,
+div.autocomplete div.ac_footer
+{
+	position: relative;
+	height: 6px;
+	padding: 0 6px;
+	background-image: url(images/autocomplete/ul_corner_tr.gif);
+	background-position: top right;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	/* MG2: background color for animation */
+	background-color: #333;
+}
+div.autocomplete div.ac_footer
+{
+	background-image: url(images/autocomplete/ul_corner_br.gif);
+	/* MG2: updated positioning for animations */
+	position: absolute;
+	bottom: 0px;
+	padding: 0;
+	width: 100%;
+}
+
+div.autocomplete div.ac_header div.ac_corner,
+div.autocomplete div.ac_footer div.ac_corner
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 6px;
+	width: 6px;
+	background-image: url(images/autocomplete/ul_corner_tl.gif);
+	background-color: #333;
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+div.autocomplete div.ac_footer div.ac_corner
+{
+	background-image: url(images/autocomplete/ul_corner_bl.gif);
+}
+
+/* MG2: removed the ac_bar classes, weren't used anymore */
+
+
+div.autocomplete ul
+{
+	list-style: none;
+	/* MG: changed margins all to 0, the -4 was causing problems with the maxHeight */
+	margin: 0;
+	padding: 0;
+	/* MG: changed to auto overflow for the maxHeight setting */
+	overflow: auto;
+	background-color: #333;
+	/* MG: added position: relative, otherwise IE6/7 won't overflow correctly */
+	position: relative;
+}
+
+div.autocomplete ul li
+{
+	color: #ccc;
+	padding: 0;
+	/* MG: changed for maxHeight setting, the bottom 4px was causing some problems */
+	margin: 0 4px 0;
+	text-align: left;
+}
+
+div.autocomplete ul li a
+{
+	color: #ccc;
+	display: block;
+	text-decoration: none;
+	background-color: transparent;
+	text-shadow: #000 0px 0px 5px;
+	position: relative;
+	padding: 0;
+	width: 100%;
+}
+div.autocomplete ul li a:hover
+{
+	background-color: #444;
+}
+div.autocomplete ul li.ac_highlight a:hover
+{
+	background-color: #1B5CCD;
+}
+
+/* MG: added ac_warning and ac_message class */
+/* MG: ac_warning was called as_warning in your css file, i removed that definition */
+div.autocomplete ul li a span,
+div.autocomplete ul li.ac_warning,
+div.autocomplete ul li.ac_message
+{
+	display: block;
+	padding: 3px 6px;
+	font-weight: bold;
+}
+
+div.autocomplete ul li a span small
+{
+	font-weight: normal;
+	color: #999;
+}
+
+div.autocomplete ul li.ac_highlight a span small
+{
+	color: #ccc;
+}
+
+div.autocomplete ul li.ac_highlight a
+{
+	color: #fff;
+	background-color: #1B5CCD;
+	background-image: url(images/autocomplete/hl_corner_br.gif);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+
+div.autocomplete ul li.ac_highlight a span
+{
+	background-image: url(images/autocomplete/hl_corner_bl.gif);
+	background-position: bottom left;
+	background-repeat: no-repeat;
+}
+
+/* MG: IE6 positioned the top left and top right corner images invalidly, changes for this fix are called 'IE6 position fix' */
+div.autocomplete ul li a .tl,
+div.autocomplete ul li a .tr
+{
+	/* MG: changed background-image:transparent to background-color transparent, as you probably meant */
+	background-color: transparent;
+	background-repeat: no-repeat;
+	width: 6px;
+	height: 6px;
+	position: absolute;
+	top: 0;
+	/* MG: added left:0, IE6 position fix */
+	left: 0;
+	padding: 0;
+	margin: 0;
+}
+/* MG: removed the following, IE6 position fix */
+/*div.autocomplete ul li a .tr
+{
+	right: 0;
+}*/
+
+div.autocomplete ul li.ac_highlight a .tl
+{
+	/* MG: removed left:0, (was defined twice now), IE6 position fix */
+	background-image: url(images/autocomplete/hl_corner_tl.gif);
+	/* MG: changed 'bottom left' to 'top left', IE6 position fix */
+	background-position: top left;
+}
+
+div.autocomplete ul li.ac_highlight a .tr
+{
+	/* MG: changed right: 0; to width: 100%, IE6 position fix */
+	width: 100%;
+	background-image: url(images/autocomplete/hl_corner_tr.gif);
+	/* MG: changed 'bottom right' to 'top right', IE6 position fix */
+	background-position: top right;
+}
+div.autocomplete ul em
+{
+	font-style: normal;
+	color: #6EADE7;
+}
+/* END AUTOCOMPLETE */
+table#multipelsRe
+{
+	margin-top:10px;
+	margin-left:10px;
+}
+table#multipelsRe tr th
+{
+	background:#666;
+	height:28px;
+	color:#FFF;
+	
+	font-size:13px;
+	font-weight:normal;
+	
+}
+table#multipelsRe tr td input[type=text]
+{
+
+	height:25px;
+	width:180px;
+	border:1px solid #696969;
+}
+
+table#multipelsRe tr td input[type=submit]
+{
+	width:70px;
+	height:27px;
+	background:#2985BF;
+	border:none;
+    color:#fff;
+}
+table#multipelsRe tr td input[type=submit]:hover
+{
+background:#2999C1;	
+}
+table#attachmentsRe
+{
+	margin-top:10px;
+	margin-left:10px;
+}
+table#attachmentsRe tr th
+{
+	background:#666666;
+	height:28px;
+	color:#FFF;
+	font-size:13px;
+	font-weight:normal;
+	
+}
+table#attachmentsRe tr td input[type=text]
+{
+
+	height:25px;
+	border:1px solid #696969;
+}
+
+table.AttachFirm
+{
+	margin-top:10px;
+	margin-left:10px;
+}
+table.AttachFirm tr th
+{
+	background:#06C;
+	
+	height:28px;
+	font-size:13px;
+	font-weight:normal;
+	color:#FFF;
+	
+}
+table.AttachFirm tr td input[type=text]
+{
+    width:220px;
+	height:25px;
+	border:1px solid #696969;
+}
+table.AttachFirm tr td select
+{
+	margin-left:0px;
+	height:25px;
+	width:220px;
+	border:1px solid #696969;
+	
+}
+
+table.ReAttachFirm
+{
+	margin-top:10px;
+	margin-left:10px;
+}
+table.ReAttachFirm tr th
+{
+	background:#666;
+	height:28px;
+	font-size:13px;
+	font-weight:normal;
+	color:#FFF;
+	width:220px;
+	
+}
+table.ReAttachFirm tr td input[type=text]
+{
+    width:220px;
+	height:25px;
+	border:1px solid #696969;
+}
+table.ReAttachFirm tr td select
+{
+	margin-left:0px;
+	height:25px;
+	width:220px;
+	border:1px solid #696969;
+}
+.notavailable
+{
+	color:#900;
+	font-size:12px;
+	font-weight:bold;
+}
+#remove_old
+{
+	width:100px;
+	height:32px;
+	background:#06F;
+		
+	border:none;
+	margin-left:10px;
+	color:#fff;
+}
+.star
+{
+	font-size:10px;
+	color:#990000;
+}
+
+
+
+
+
+
+
+
+
+.basic_table_style
+{
+background:#D9FFB4;	
+height:40px;
+}
+.basic_text_style
+{
+	text-transform:capitalize;
+
+}
+.warning
+{
+	height:30px; 
+	width:300px; 
+	margin-left:145px; 
+	padding-left:20px; 
+	line-height:30px; 
+	color:#000; 
+	background:#FFFF66;border:1px solid #F60;
+	
+}
